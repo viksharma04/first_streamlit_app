@@ -23,7 +23,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
-def get_fruityvie_data(this_fruit_choice):
+def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
     # Normalize json output from API request
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
